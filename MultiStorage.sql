@@ -4,8 +4,8 @@ CREATE DATABASE IF NOT EXISTS MultiStorage;
 CREATE TABLE FUNCIONARIO(
 cod_func tinyint(3) PRIMARY KEY  ,
 nome_func  varchar(50),
-tel_func int(11),
-cpf_func int(11),
+tel_func bigint(11),
+cpf_func bigint(11),
 tipo_sang char(2),
 setor char(10)
 ) Default CHARSET = utf8;
@@ -37,18 +37,18 @@ valor_peca int(6)
 );
 
 CREATE TABLE CLIENTE(
-cod_cli int(11) PRIMARY KEY  NOT NULL,
+cod_cli bigint(11) PRIMARY KEY  NOT NULL,
 nome_cli char(50),
-tel_cli int(11),
+tel_cli bigint(11),
 end_cli varchar(250),
-cpf_cli int(11),
-idade_cli tinyint(3)
+cpf_cli bigint(11),
+idade_cli int(3)
 
 );
 
 
 CREATE TABLE SERVICOS_MECANICA(
-id_serv smallint (4) PRIMARY KEY ,
+id_serv int (4) PRIMARY KEY ,
 cod_func integer,
 cod_cli integer,
 CONSTRAINT fk_cod_cli FOREIGN KEY (cod_cli) REFERENCES CLIENTE (cod_cli),
