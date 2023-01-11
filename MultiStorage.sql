@@ -80,3 +80,26 @@ CONSTRAINT fk_Id_gen_mec FOREIGN KEY (Id_gen_mec ) REFERENCES GERENCIA_mecanica 
 );
 
 
+INSERT INTO `FUNCIONARIO` (`cod_func`, `nome_func`, `tel_func`, `cpf_func`, `tipo_sang`,`setor`) VALUES
+  ('010', 'ANAKIN SKYWALKER', '66996457812', '45685942615','A+', 'MERCADINHO'),
+  ('011', 'ROBSON VIEIRA', '66966524268', '458965987595', 'O+', 'MERCADINHO'),
+  ('012', 'KLEIVEK TRISTANO', '66969587562', '60565975975','B-', 'MERCADINHO')
+;
+
+INSERT INTO `GERENCIA_mecanica`  (`Id_gen_mec`,`cod_func` ) VALUES
+  ('01','010')
+  ;
+INSERT INTO `GERENCIA_Mercadinho`(`Id_gen_merc`,`cod_func`) VALUES 
+  ('01','011')
+;
+
+INSERT INTO `PRODUTOS_MERCADINHO` (`cod_prod_merc`, `nome_prod`, `valor_prod`) VALUES 
+   ('6695371659','Arroz Tio Joao TP1','34,50') 
+;
+
+INSERT INTO `PRODUTOS_MECANICA` (`cod_prod_mec`,`nome_peca`,`tipo`,`valor_peca`) VALUES 
+    ('1091091556','Cabeçote do motor','carro','5850.00')
+;
+
+
+
